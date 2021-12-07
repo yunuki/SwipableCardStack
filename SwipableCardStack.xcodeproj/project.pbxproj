@@ -10,6 +10,8 @@
 		142927FA275FD7EB00E01E2D /* SwipableCardStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142927F0275FD7EB00E01E2D /* SwipableCardStack.framework */; };
 		142927FF275FD7EB00E01E2D /* SwipableCardStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142927FE275FD7EB00E01E2D /* SwipableCardStackTests.swift */; };
 		14292801275FD7EB00E01E2D /* SwipableCardStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 142927F3275FD7EB00E01E2D /* SwipableCardStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1429280C275FD84600E01E2D /* SwipableCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429280B275FD84600E01E2D /* SwipableCardStack.swift */; };
+		1429280E275FE38000E01E2D /* SwipableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429280D275FE38000E01E2D /* SwipableCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		142927F9275FD7EB00E01E2D /* SwipableCardStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipableCardStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		142927FE275FD7EB00E01E2D /* SwipableCardStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCardStackTests.swift; sourceTree = "<group>"; };
 		14292800275FD7EB00E01E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1429280B275FD84600E01E2D /* SwipableCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCardStack.swift; sourceTree = "<group>"; };
+		1429280D275FE38000E01E2D /* SwipableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			children = (
 				142927F2275FD7EB00E01E2D /* SwipableCardStack */,
 				142927FD275FD7EB00E01E2D /* SwipableCardStackTests */,
+				1429280A275FD80A00E01E2D /* Source */,
 				142927F1275FD7EB00E01E2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +89,15 @@
 				14292800275FD7EB00E01E2D /* Info.plist */,
 			);
 			path = SwipableCardStackTests;
+			sourceTree = "<group>";
+		};
+		1429280A275FD80A00E01E2D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1429280B275FD84600E01E2D /* SwipableCardStack.swift */,
+				1429280D275FE38000E01E2D /* SwipableCardView.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 				TargetAttributes = {
 					142927EF275FD7EB00E01E2D = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					142927F8275FD7EB00E01E2D = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -194,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1429280C275FD84600E01E2D /* SwipableCardStack.swift in Sources */,
+				1429280E275FE38000E01E2D /* SwipableCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +358,7 @@
 		14292805275FD7EB00E01E2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PX37AVLC5L;
@@ -357,6 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunuki.SwipableCardStack;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +384,7 @@
 		14292806275FD7EB00E01E2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PX37AVLC5L;
@@ -389,6 +409,7 @@
 		14292808275FD7EB00E01E2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX37AVLC5L;
 				INFOPLIST_FILE = SwipableCardStackTests/Info.plist;
@@ -407,6 +428,7 @@
 		14292809275FD7EB00E01E2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX37AVLC5L;
 				INFOPLIST_FILE = SwipableCardStackTests/Info.plist;
