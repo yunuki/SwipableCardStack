@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol SwipableCardStackDataSource: NSObject {
+public protocol SwipableCardStackDataSource: NSObject {
     func numberOfCardsToShow() -> Int
     func card(at index: Int) -> SwipableCardView
 }
 
-protocol SwipableCardStackDelegate: NSObject {
+public protocol SwipableCardStackDelegate: NSObject {
     func cardDidSwiped(currentTopCard: SwipableCardView)
     func stackIsEmpty(isEmpty: Bool)
 }
@@ -34,9 +34,9 @@ public class SwipableCardStack: UIView {
     private var distance: CGFloat {
         return (self.frame.width - topCardViewSize.width) / CGFloat(numberOfLayers - 1)
     }
-    private let differenceScale: CGFloat = 0.2
+    private let differenceScale: CGFloat = 0.1
     private var topCardViewSize: CGSize {
-        return self.frame.size.applying(CGAffineTransform(scaleX: 0.7, y: 1.0))
+        return self.frame.size.applying(CGAffineTransform(scaleX: 0.8, y: 1.0))
     }
     private var widthDifference: CGFloat {
         return topCardViewSize.width * differenceScale
@@ -48,8 +48,8 @@ public class SwipableCardStack: UIView {
     private var leftGesture: UISwipeGestureRecognizer!
     private var rightGesture: UISwipeGestureRecognizer!
 
-    weak var dataSource: SwipableCardStackDataSource?
-    weak var delegate: SwipableCardStackDelegate?
+    public weak var dataSource: SwipableCardStackDataSource?
+    public weak var delegate: SwipableCardStackDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

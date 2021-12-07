@@ -7,12 +7,11 @@
 
 import UIKit
 
-class SwipableCardView: UIView {
+public class SwipableCardView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addShadow()
-        backgroundColor = .blue
     }
     
     required init?(coder: NSCoder) {
